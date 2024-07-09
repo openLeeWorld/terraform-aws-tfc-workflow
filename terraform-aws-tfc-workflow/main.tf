@@ -1,4 +1,5 @@
 terraform {
+  /*
   cloud {
     organization = "openLeeWorld-org"
     hostname     = "app.terraform.io" # default
@@ -7,6 +8,7 @@ terraform {
       name = "terraform-aws-tfc-workflow"
     }
   }
+  */
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -19,7 +21,8 @@ provider "aws" {
   region = var.region
   default_tags {
     tags = {
-      name        = "${var.prefix}-vpc-${var.region}"
+      #name        = "${var.prefix}-vpc-${var.region}"
+      name = "terraform cloud workflow"
       environment = var.environment
     }
   }
