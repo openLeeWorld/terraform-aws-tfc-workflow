@@ -5,7 +5,7 @@ terraform {
 
     workspaces {
       name = "terraform-aws-tfc-workflow"
-    }
+    } # terraform cloud 연동
   }
   required_providers {
     aws = {
